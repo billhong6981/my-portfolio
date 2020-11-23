@@ -15,7 +15,6 @@ import {
   SideNavItems,
   SideNavLink,
   SideNavMenu,
-  //SideNavMenuItem,
   HeaderPanel,
   Switcher,
   SwitcherItem,
@@ -35,8 +34,6 @@ const TutorialHeader = () => (
       onMouseOutSideNavExpand,
       isRightPanelExpanded,
       onClickRightPanelExpand,
-      //onMouseOverRightPanelExpand,
-      //onMouseOutRightPanelExpand,
     }) => (
       <Header aria-label="BH Portfollio">
         <SkipToContent />
@@ -50,9 +47,9 @@ const TutorialHeader = () => (
         />
 
         <HeaderName element={Link} to="/" prefix="BH">
-          Portfollio
+          Portfolio
         </HeaderName>
-        <HeaderNavigation aria-label="BH portfollio">
+        <HeaderNavigation aria-label="BH portfolio">
           <HeaderMenuItem element={Link} to="/repos">
             Github Repos
           </HeaderMenuItem>
@@ -60,6 +57,13 @@ const TutorialHeader = () => (
         <SideNav expanded={isSideNavExpanded} aria-label="Side Navigation">
           <SideNavItems>
             <SideNavMenu title="My WebApp" />
+            <SideNavLink
+              renderIcon={Fade16}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://get-github-repos-billhong6981.mybluemix.net/">
+              Get Github Repos
+            </SideNavLink>
             <SideNavLink
               renderIcon={Fade16}
               target="_blank"
@@ -95,13 +99,6 @@ const TutorialHeader = () => (
               href="https://billhong6981.github.io/html-table/">
               Text to Table
             </SideNavLink>
-            <SideNavLink
-              renderIcon={Fade16}
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://billhong6981.github.io/guess-number-game/">
-              Guess Number Game
-            </SideNavLink>
           </SideNavItems>
         </SideNav>
 
@@ -109,8 +106,6 @@ const TutorialHeader = () => (
           <HeaderGlobalAction
             aria-label="App Switcher"
             onClick={onClickRightPanelExpand}
-            //onMouseOver={onMouseOverRightPanelExpand}
-            //onMouseOut={onMouseOutRightPanelExpand}
             isActive={isRightPanelExpanded}>
             <AppSwitcher20 />
           </HeaderGlobalAction>
@@ -126,7 +121,7 @@ const TutorialHeader = () => (
                 className="aHeading"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="%PUBLIC_URL%/Resume-cover_letter.pdf">
+                href="Resume-cover-letter.pdf">
                 Resume
               </a>
             </SwitcherItem>

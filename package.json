@@ -1,9 +1,8 @@
 {
-  "name": "carbon-tutorial",
+  "name": "my-portfolio",
   "version": "0.0.0",
   "private": true,
-  "repository": "git@github.com:carbon-design-system/carbon-tutorial.git",
-  "bugs": "https://github.com/carbon-design-system/carbon-tutorial/issues",
+  "repository": "git@github.com:billhong6981/my-portfolio.git",
   "license": "Apache-2.0",
   "scripts": {
     "build": "react-scripts build",
