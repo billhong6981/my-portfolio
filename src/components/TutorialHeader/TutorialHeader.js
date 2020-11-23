@@ -90,7 +90,7 @@ const TutorialHeader = () => (
               target="_blank"
               rel="noopener noreferrer"
               href="https://billhong6981.github.io/guess-number-game/">
-              Get Github Repos
+              Guess Number Game
             </SideNavLink>
             <SideNavLink
               renderIcon={Fade16}
