@@ -30,8 +30,8 @@ const TutorialHeader = () => (
     render={({
       isSideNavExpanded,
       onClickSideNavExpand,
-      onMouseOverSideNavExpand,
-      onMouseOutSideNavExpand,
+      //onMouseOverSideNavExpand,
+      //onMouseOutSideNavExpand,
       isRightPanelExpanded,
       onClickRightPanelExpand,
     }) => (
@@ -41,8 +41,8 @@ const TutorialHeader = () => (
           aria-label="Open menu"
           isCollapsible
           onClick={onClickSideNavExpand}
-          onMouseOver={onMouseOverSideNavExpand}
-          onMouseOut={onMouseOutSideNavExpand}
+          //onMouseOver={onMouseOverSideNavExpand}
+          //onMouseOut={onMouseOutSideNavExpand}
           isActive={isSideNavExpanded}
         />
 
