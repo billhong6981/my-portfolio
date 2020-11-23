@@ -1,0 +1,7 @@
+.aHeading {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  color: white;
+  @include carbon--type-style('productive-heading-02');
+}

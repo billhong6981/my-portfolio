@@ -1,0 +1,26 @@
+.search-page__r1 {
+  padding-top: $spacing-09;
+  padding-bottom: $spacing-09 * 4;
+  max-width: 100%;
+}
+
+.form-name {
+  display: inline;
+  @include carbon--type-style('productive-heading-02');
+}
+
+.buttonName {
+  @include carbon--type-style('productive-heading-01');
+}
+
+.selectHeading {
+  @include carbon--type-style('productive-heading-01');
+}
+
+#select-1 {
+  margin-bottom: $spacing-05;
+}
+
+.wrapper1 {
+  display: flex;
+}

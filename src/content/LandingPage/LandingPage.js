@@ -1,19 +1,10 @@
 import React from 'react';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Button,
-  Tabs,
-  Tab,
-} from 'carbon-components-react';
-import { InfoSection, InfoCard } from '../../components/Info';
-import Globe32 from '@carbon/icons-react/lib/globe/32';
-import PersonFavorite32 from '@carbon/icons-react/lib/person--favorite/32';
-import Application32 from '@carbon/icons-react/lib/application/32';
+import { Breadcrumb, BreadcrumbItem, Tabs, Tab } from 'carbon-components-react';
+import BouncingBall from '../BouncingBall';
 
 const props = {
   tabs: {
-    selected: 0,
+    selected: 1,
     triggerHref: '#',
     role: 'navigation',
   },
@@ -28,62 +19,119 @@ const LandingPage = () => {
   return (
     <div className="bx--grid bx--grid--full-width landing-page">
       <div className="bx--row landing-page__banner">
-        <div className="bx--col-lg-16">
-          <Breadcrumb noTrailingSlash aria-label="Page navigation">
+        <div className="bx--col-md-2 bx--col-lg-2">
+          <BouncingBall />
+        </div>
+        <div className="bx--col-md-6 bx--offset-lg-1 bx--col-lg-13">
+          <h4 className="landing-page__heading">
+            Bill Huang (Looking for job @frontend/backend/fullstack)
+            <br />
+            <p className="landing-page__subheading1">
+              &nbsp;&nbsp;coding in Los Angeles, California{' '}
+            </p>
+          </h4>
+          <br />
+          <p className="landing-page__subheading1">
+            &nbsp;&nbsp;Front-end: | Javascript | react | jQuery | CSS3 | HTML5
+            | Carbon
+            <br />
+            &nbsp;&nbsp;Back--end: | Python | Flask | MySql | sqlite | graphql |
+            nodejs
+            <br />
+            &nbsp;&nbsp;Sys-admin: | C | Linux | Bash-shell | Docker | Virtual
+            Box
+            <br />
+          </p>
+          <Breadcrumb noTrailingSlash>
             <BreadcrumbItem>
-              <a href="/">Getting started</a>
+              <a href="mailto:bill.burton6981@gmail.com">
+                &nbsp;&nbsp;email: bill.burton6981@gmail.com
+              </a>
             </BreadcrumbItem>
           </Breadcrumb>
-          <h1 className="landing-page__heading">
-            Design &amp; build with Carbon
-          </h1>
         </div>
       </div>
       <div className="bx--row landing-page__r2">
         <div className="bx--col bx--no-gutter">
           <Tabs {...props.tabs} aria-label="Tab navigation">
-            <Tab {...props.tab} label="About">
+            <Tab {...props.tab} label="About Me">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
-                  <div className="bx--col-md-4 bx--col-lg-7">
-                    <h2 className="landing-page__subheading">
-                      What is Carbon?
-                    </h2>
-                    <p className="landing-page__p">
-                      Carbon is IBM’s open-source design system for digital
-                      products and experiences. With the IBM Design Language as
-                      its foundation, the system consists of working code,
-                      design tools and resources, human interface guidelines,
-                      and a vibrant community of contributors.
+                  <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-7">
+                    <h4 className="landing-page__subheading">About Me</h4>
+                    <p>
+                      Hi! I am Bill Huang, I finished 4 years of college and got
+                      a Bachelor's degree in Electrical Engineering (double E)
+                      in China, I had worked in Agriculture Bank of China as
+                      networking administrator for 3 years. After moving to US,
+                      I worked in a newspaper company as a graphic designer for
+                      20 years in Los Angeles.
                     </p>
-                    <Button>Learn more</Button>
                   </div>
-                  <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
-                    <img
-                      className="landing-page__illo"
-                      src={`${process.env.PUBLIC_URL}/tab-illo.png`}
-                      alt="Carbon illustration"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Tab>
-            <Tab {...props.tab} label="Design">
-              <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
-                <div className="bx--row landing-page__tab-content">
-                  <div className="bx--col-lg-16">
-                    Rapidly build beautiful and accessible experiences. The
-                    Carbon kit contains all resources you need to get started.
+                  <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-7">
+                    <p>
+                      I have engineering background, so I have strong insight
+                      vision about the things, it is very important for the
+                      software engineer. I never stop for learning the new
+                      skill, always try to understanding how it works under the
+                      hood. I familiar with C, Python, Javascript, Linux Shell,
+                      MySql. My full-stack webapp: Many-to-Many is about the
+                      relational database Many-to-Many.
+                    </p>
                   </div>
                 </div>
               </div>
             </Tab>
-            <Tab {...props.tab} label="Develop">
+
+            <Tab {...props.tab} label="Work">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
-                  <div className="bx--col-lg-16">
-                    Carbon provides styles and components in Vanilla, React,
-                    Angular, and Vue for anyone building on the web.
+                  <div className="bx--offset-md-1 bx--col-md-7 bx--offset-lg-2 bx--col-lg-14">
+                    <p className="workHeading">
+                      Give me a try, I can delivery the code for you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Tab>
+
+            <Tab {...props.tab} label="Education">
+              <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
+                <div className="bx--row landing-page__tab-content">
+                  <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-7">
+                    <h4 className="landing-page__subheading">Education</h4>
+                    <p>
+                      "startDate": "2019-01-01"
+                      <br />
+                      "endDate": "2019-10-01"
+                      <br />
+                      "institution": "Holberton School, San Francisco, CA"
+                      <br />
+                      "studyType": "Foundation of Computer Science"
+                      <br />
+                      "description": "Holberton School is a project-based coding
+                      school, students were training by hand on the project
+                      about Shell Script, C programming, Python, Javascript,
+                      Web-stack to be a full stack developer."
+                    </p>
+                  </div>
+                  <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-7">
+                    <h4 className="landing-page__subheading">Education</h4>
+                    <p>
+                      "startDate": "1987-09-01"
+                      <br />
+                      "endDate": "1991-06-01"
+                      <br />
+                      "institution": "Hua Qiao University"
+                      <br />
+                      "area": "Electrical Engineering"
+                      <br />
+                      "studyType": "Bachelor's of Engineer"
+                      <br />
+                      "description": "4 years of studying in Electrical
+                      Engineering make me have a stronger logic judgement and
+                      thinking."
+                    </p>
                   </div>
                 </div>
               </div>
@@ -91,23 +139,56 @@ const LandingPage = () => {
           </Tabs>
         </div>
       </div>
-      <InfoSection heading="The Principles" className="landing-page__r3">
-        <InfoCard
-          heading="Carbon is Open"
-          body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
-          icon={<PersonFavorite32 />}
-        />
-        <InfoCard
-          heading="Carbon is Modular"
-          body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
-          icon={<Application32 />}
-        />
-        <InfoCard
-          heading="Carbon is Consistent"
-          body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
-          icon={<Globe32 />}
-        />
-      </InfoSection>
+      <div className="bx--row landing-page__r3">
+        <div className="bx--col-md-2 bx--col-lg-4">
+          <Breadcrumb noTrailingSlash>
+            <BreadcrumbItem>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/billhong6981">
+                | GitHub |
+              </a>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+        <div className="bx--col-md-2 bx--col-lg-4">
+          <Breadcrumb noTrailingSlash>
+            <BreadcrumbItem>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/BillH35534014">
+                | Twitter |
+              </a>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+        <div className="bx--col-md-2 bx--col-lg-4">
+          <Breadcrumb noTrailingSlash>
+            <BreadcrumbItem>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/bill-huang-bb680217a">
+                | LinkedIn |
+              </a>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+        <div className="bx--col-md-2 bx--col-lg-4">
+          <Breadcrumb noTrailingSlash>
+            <BreadcrumbItem>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://medium.com/@bill.burton6981">
+                | Medium |
+              </a>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+      </div>
     </div>
   );
 };

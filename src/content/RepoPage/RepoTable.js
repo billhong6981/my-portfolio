@@ -19,6 +19,8 @@ const RepoTable = ({ rows, headers }) => {
     return row ? row.description : '';
   };
 
+  const name = localStorage.getItem('userName') || 'carbon-design-system';
+
   return (
     <DataTable
       rows={rows}
@@ -31,8 +33,8 @@ const RepoTable = ({ rows, headers }) => {
         getTableProps,
       }) => (
         <TableContainer
-          title="Carbon Repositories"
-          description="A collection of public Carbon repositories.">
+          title={name}
+          description="A collection of public repositories.">
           <Table {...getTableProps()}>
             <TableHead>
               <TableRow>

@@ -4,10 +4,17 @@ import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
 import { Link, DataTableSkeleton, Pagination } from 'carbon-components-react';
 
+//const org = localStorage.getItem('userType') || 'organization';
+//const name = localStorage.getItem('userName') || 'carbon-design-system';
+
+const org = 'user';
+const name = 'billhong6981';
+
 const REPO_QUERY = gql`
   query REPO_QUERY {
     # Let's use carbon as our organization
-    organization(login: "carbon-design-system") {
+    # organization(login: "billhong6981") {
+      ${org}(login: "${name}") {
       # We'll grab all the repositories in one go. To load more resources
       # continuously, see the advanced topics.
       repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
@@ -95,12 +102,13 @@ const RepoPage = () => {
   const [firstRowIndex, setFirstRowIndex] = useState(0);
   const [currentPageSize, setCurrentPageSize] = useState(10);
 
+  // {({ loading, error, data: { organization } }) => {
   return (
     <div className="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
       <div className="bx--row repo-page__r1">
         <div className="bx--col-lg-16">
           <Query query={REPO_QUERY}>
-            {({ loading, error, data: { organization } }) => {
+            {({ loading, error, data }) => {
               // Wait for the request to complete
               if (loading)
                 return (
@@ -115,7 +123,10 @@ const RepoPage = () => {
               if (error) return `Error! ${error.message}`;
 
               // If we're here, we've got our data!
-              const { repositories } = organization;
+              // const { repositories } = organization;
+
+              const { repositories } = data.user || data.organization;
+
               setTotalItems(repositories.totalCount);
               const rows = getRowItems(repositories.nodes);
 
