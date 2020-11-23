@@ -121,7 +121,7 @@ const TutorialHeader = () => (
                 className="aHeading"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="Resume-cover-letter.pdf">
+                href="https://drive.google.com/file/d/1MAlTDby4jCHaPPGVHlBk-OyXx6vmicAY/view?usp=sharing">
                 Resume
               </a>
             </SwitcherItem>
